@@ -1,0 +1,119 @@
+1. **The Shawshank Redemption**
+   - *Year*: 1994
+   - *Director*: Frank Darabont
+   - *Genre*: Drama
+   - *Cast*: Tim Robbins (as Andy Dufresne)
+   - *Cast*: Morgan Freeman (as Ellis 'Red' Redding)
+   - *Cast*: Bob Gunton (as Warden Samuel Norton)
+
+2. **The Godfather**
+   - *Year*: 1972
+   - *Director*: Francis Ford Coppola
+   - *Genre*: Crime, Drama
+   - *Cast*: Marlon Brando (as Vito Corleone)
+   - *Cast*: Al Pacino (as Michael Corleone)
+   - *Cast*: James Caan (as Sonny Corleone)
+
+3. **The Dark Knight**
+   - *Year*: 2008
+   - *Director*: Christopher Nolan
+   - *Genre*: Action, Crime, Drama
+   - *Cast*: Christian Bale (as Bruce Wayne / Batman)
+   - *Cast*: Heath Ledger (as The Joker)
+   - *Cast*: Aaron Eckhart (as Harvey Dent)
+
+4. **The Godfather Part II**
+   - *Year*: 1974
+   - *Director*: Francis Ford Coppola
+   - *Genre*: Crime, Drama
+   - *Cast*: Al Pacino (as Michael Corleone)
+   - *Cast*: Robert De Niro (as Young Vito Corleone)
+   - *Cast*: Robert Duvall (as Tom Hagen)
+
+5. **12 Angry Men**
+   - *Year*: 1957
+   - *Director*: Sidney Lumet
+   - *Genre*: Drama
+   - *Cast*: Henry Fonda (as Juror #8)
+   - *Cast*: Lee J. Cobb (as Juror #3)
+   - *Cast*: Martin Balsam (as Juror #1)
+
+6. **Schindler’s List**
+   - *Year*: 1993
+   - *Director*: Steven Spielberg
+   - *Genre*: Biography, Drama, History
+   - *Cast*: Liam Neeson (as Oskar Schindler)
+   - *Cast*: Ben Kingsley (as Itzhak Stern)
+   - *Cast*: Ralph Fiennes (as Amon Goeth)
+
+7. **The Lord of the Rings: The Return of the King**
+   - *Year*: 2003
+   - *Director*: Peter Jackson
+   - *Genre*: Action, Adventure, Drama
+   - *Cast*: Elijah Wood (as Frodo Baggins)
+   - *Cast*: Viggo Mortensen (as Aragorn)
+   - *Cast*: Ian McKellen (as Gandalf)
+
+8. **Pulp Fiction**
+   - *Year*: 1994
+   - *Director*: Quentin Tarantino
+   - *Genre*: Crime, Drama
+   - *Cast*: John Travolta (as Vincent Vega)
+   - *Cast*: Uma Thurman (as Mia Wallace)
+   - *Cast*: Samuel L. Jackson (as Jules Winnfield)
+
+9. **The Good, the Bad and the Ugly**
+   - *Year*: 1966
+   - *Director*: Sergio Leone
+   - *Genre*: Western
+   - *Cast*: Clint Eastwood (as Blondie (The Good))
+   - *Cast*: Lee Van Cleef (as Angel Eyes (The Bad))
+   - *Cast*: Eli Wallach (as Tuco (The Ugly))
+
+10. **Forrest Gump**
+    - *Year*: 1994
+    - *Director*: Robert Zemeckis
+    - *Genre*: Drama, Romance
+    - *Cast*: Tom Hanks (as Forrest Gump)
+    - *Cast*: Robin Wright (as Jenny Curran)
+    - *Cast*: Gary Sinise (as Lt. Dan Taylor)
+
+11. **Fight Club**
+    - *Year*: 1999
+    - *Director*: David Fincher
+    - *Genre*: Drama
+    - *Cast*: Edward Norton (as The Narrator)
+    - *Cast*: Brad Pitt (as Tyler Durden)
+    - *Cast*: Helena Bonham Carter (as Marla Singer)
+
+12. **Inception**
+    - *Year*: 2010
+    - *Director*: Christopher Nolan
+    - *Genre*: Action, Adventure, Sci-Fi
+    - *Cast*: Leonardo DiCaprio (as Dom Cobb)
+    - *Cast*: Joseph Gordon-Levitt (as Arthur)
+    - *Cast*: Ellen Page (as Ariadne)
+
+13. **The Matrix**
+    - *Year*: 1999
+    - *Director*: The Wachowskis
+    - *Genre*: Action, Sci-Fi
+    - *Cast*: Keanu Reeves (as Neo)
+    - *Cast*: Laurence Fishburne (as Morpheus)
+    - *Cast*: Carrie-Anne Moss (as Trinity)
+
+14. **Goodfellas**
+    - *Year*: 1990
+    - *Director*: Martin Scorsese
+    - *Genre*: Crime, Drama
+    - *Cast*: Ray Liotta (as Henry Hill)
+    - *Cast*: Robert De Niro (as James Conway)
+    - *Cast*: Joe Pesci (as Tommy DeVito)
+
+15. **The Silence of the Lambs**
+    - *Year*: 1991
+    - *Director*: Jonathan Demme
+    - *Genre*: Crime, Drama, Thriller
+    - *Cast*: Jodie Foster (as Clarice Starling)
+    - *Cast*: Anthony Hopkins (as Hannibal Lecter)
+    - *Cast*: Scott Glenn (as Jack Crawford)

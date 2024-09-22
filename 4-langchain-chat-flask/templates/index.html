@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Chat</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      #chatbox {
+        width: 100%;
+        height: 600px;
+        border: 1px solid #ddd;
+        overflow-y: auto;
+        padding: 10px;
+        background-color: #f9f9f9;
+      }
+      #userInput {
+        width: calc(100% - 80px);
+        padding: 10px;
+      }
+      #sendButton {
+        padding: 10px;
+      }
+      .message {
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 5px;
+      }
+      .user-message {
+        background-color: #e1f5fe;
+        text-align: left;
+      }
+      .ai-message {
+        background-color: #fff9c4;
+        text-align: left;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Load marked.js -->
+  </head>
+  <body>
+    <h2>AI Chat</h2>
+    <div id="chatbox"></div>
+    <input type="text" id="userInput" placeholder="Type a message..." />
+    <button id="sendButton">Send</button>
+
+    <script>
+      let sessionId = null;
+
+      // Function to append messages to the chatbox
+      function appendMessage(sender, message) {
+        const chatbox = document.getElementById("chatbox");
+        const msgElement = document.createElement("div");
+        msgElement.className = `message ${sender.toLowerCase()}-message`;
+        msgElement.innerHTML = `<strong>${sender}:</strong> ${marked.parse(message)}`;
+        chatbox.appendChild(msgElement);
+        chatbox.scrollTop = chatbox.scrollHeight;
+      }
+
+      // Function to send user input to the Flask backend
+      async function sendMessage() {
+        const userInput = document.getElementById("userInput").value;
+
+        if (!userInput) return;
+
+        appendMessage("You", userInput);
+
+        const response = await fetch("/chat", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ question: userInput, session_id: sessionId }),
+        });
+
+        const data = await response.json();
+
+        if (data.error) {
+          appendMessage("Error", data.error);
+        } else {
+          appendMessage("AI", data.response);
+          sessionId = data.session_id; // Keep the session alive
+          if (data.token_usage) {
+            appendMessage(
+              "System",
+              `Token Usage: ${JSON.stringify(data.token_usage)}`,
+            );
+          }
+        }
+
+        document.getElementById("userInput").value = "";
+      }
+
+      document
+        .getElementById("sendButton")
+        .addEventListener("click", sendMessage);
+
+      // Allow sending by pressing Enter key
+      document
+        .getElementById("userInput")
+        .addEventListener("keypress", function (e) {
+          if (e.key === "Enter") {
+            sendMessage();
+          }
+        });
+    </script>
+  </body>
+</html>

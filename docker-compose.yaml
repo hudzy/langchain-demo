@@ -1,0 +1,49 @@
+version: "3"
+
+services:
+  langchain-python:
+    image: python:3.12-slim
+    container_name: langchain-python
+    ports:
+      - "8082:5000"
+    volumes:
+      - .:/langchain
+    working_dir: /langchain
+    entrypoint: /bin/sh
+    command: -c 'pip install -r ./requirements.txt; tail -f /dev/null'
+    restart: always
+
+  mysql:
+    image: mysql:5.7
+    container_name: langchain-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: langchain
+      MYSQL_USER: langchain
+      MYSQL_PASSWORD: langchain
+    ports:
+      - "7082:3306"
+    volumes:
+      - ./database/mysql/mysql_data:/data
+      # - mysql_data:/var/lib/mysql
+    restart: always
+
+  neo4j:
+    build: ./database/neo4j
+    container_name: langchain-neo4j
+    environment:
+      NEO4J_AUTH: neo4j/langchain
+      NEO4J_server_default__listen__address: 0.0.0.0
+      NEO4J_apoc_export_file_enabled: "true"
+      NEO4J_apoc_import_file_enabled: "true"
+      NEO4J_apoc_import_file_use__neo4j__config: "true"
+      NEO4J_dbms_security_procedures_unrestricted: "apoc.*"
+    ports:
+      - "7182:7474" # HTTP web interface
+      - "7183:7687" # Bolt protocol
+    volumes:
+      - ./database/neo4j/neo4j_data:/data
+      # - neo4j_data:/data
+# volumes:
+#   mysql_data:
+#   neo4j_data:

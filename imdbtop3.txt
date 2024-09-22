@@ -1,0 +1,23 @@
+1. **The Shawshank Redemption**
+   - *Year*: 1994
+   - *Director*: Frank Darabont
+   - *Genre*: Drama
+   - *Cast*: Tim Robbins (as Andy Dufresne)
+   - *Cast*: Morgan Freeman (as Ellis 'Red' Redding)
+   - *Cast*: Bob Gunton (as Warden Samuel Norton)
+
+2. **The Godfather**
+   - *Year*: 1972
+   - *Director*: Francis Ford Coppola
+   - *Genre*: Crime, Drama
+   - *Cast*: Marlon Brando (as Vito Corleone)
+   - *Cast*: Al Pacino (as Michael Corleone)
+   - *Cast*: James Caan (as Sonny Corleone)
+
+3. **The Dark Knight**
+   - *Year*: 2008
+   - *Director*: Christopher Nolan
+   - *Genre*: Action, Crime, Drama
+   - *Cast*: Christian Bale (as Bruce Wayne / Batman)
+   - *Cast*: Heath Ledger (as The Joker)
+   - *Cast*: Aaron Eckhart (as Harvey Dent)
