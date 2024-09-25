@@ -8,11 +8,23 @@ from langchain_experimental.graph_transformers.llm import LLMGraphTransformer
 from langchain_openai import AzureChatOpenAI, ChatOpenAI
 from langchain_text_splitters.character import RecursiveCharacterTextSplitter
 
-
 # Deepseek
-API_KEY = "sk-axxxxx"
-ENDPOINT = "https://api.deepseek.com/beta"
-MODEL_NAME = "deepseek-chat"
+# API_KEY = os.getenv("DEEPSEEK_API_KEY")
+# ENDPOINT = "https://api.deepseek.com"
+# MODEL_NAME = "deepseek-chat"
+
+# Github marketplace
+# API_KEY = os.getenv("GITHUB_MARKETPLACE_API_KEY")
+# ENDPOINT = "https://models.inference.ai.azure.com"
+# MODEL_NAME = "gpt-4o"
+
+# Cloudflare Worker AI
+API_KEY = os.getenv("CLOUDFLARE_WORKER_AI_API_KEY")
+ACCOUNT_ID = os.getenv("CLOUDFLARE_WORKER_AI_ACCOUNT_ID")
+ENDPOINT = f"https://api.cloudflare.com/client/v4/accounts/{ACCOUNT_ID}/ai/v1"
+MODEL_NAME = "@cf/meta/llama-3.1-8b-instruct"
+
+os.environ["SSL_CERT_FILE"] = os.getenv("REQUESTS_CA_BUNDLE")
 
 
 llm = ChatOpenAI(

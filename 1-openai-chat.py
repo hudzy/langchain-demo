@@ -3,9 +3,23 @@ import os
 from openai import OpenAI
 
 # Deepseek
-token = "sk-axxxxx"
-endpoint = "https://api.deepseek.com"
-model_name = "deepseek-chat"
+# API_KEY = os.getenv("DEEPSEEK_API_KEY")
+# ENDPOINT = "https://api.deepseek.com"
+# MODEL_NAME = "deepseek-chat"
+
+# Github marketplace
+# API_KEY = os.getenv("GITHUB_MARKETPLACE_API_KEY")
+# ENDPOINT = "https://models.inference.ai.azure.com"
+# MODEL_NAME = "gpt-4o"
+
+# Cloudflare Worker AI
+API_KEY = os.getenv("CLOUDFLARE_WORKER_AI_API_KEY")
+ACCOUNT_ID = os.getenv("CLOUDFLARE_WORKER_AI_ACCOUNT_ID")
+ENDPOINT = f"https://api.cloudflare.com/client/v4/accounts/{ACCOUNT_ID}/ai/v1"
+MODEL_NAME = "@cf/meta/llama-3.1-8b-instruct"
+
+os.environ["SSL_CERT_FILE"] = os.getenv("REQUESTS_CA_BUNDLE")
+
 
 client = OpenAI(
     base_url=endpoint,

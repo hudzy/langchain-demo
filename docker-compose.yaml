@@ -4,6 +4,8 @@ services:
   langchain-python:
     image: python:3.12-slim
     container_name: langchain-python
+    # environment:
+    #   https_proxy: placehoder
     ports:
       - "8082:5000"
     volumes:
@@ -30,6 +32,7 @@ services:
 
   neo4j:
     build: ./database/neo4j
+    # image: neo4j:5.22.0-community-apoc
     container_name: langchain-neo4j
     environment:
       NEO4J_AUTH: neo4j/langchain

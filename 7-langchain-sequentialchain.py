@@ -7,12 +7,23 @@ from langchain_core.rate_limiters import InMemoryRateLimiter
 from langchain_core.runnables import RunnableLambda, RunnablePassthrough
 from langchain_openai import AzureChatOpenAI, ChatOpenAI
 
-
 # Deepseek
-API_KEY = "sk-axxxxx"
-ENDPOINT = "https://api.deepseek.com"
-MODEL_NAME = "deepseek-chat"
+# API_KEY = os.getenv("DEEPSEEK_API_KEY")
+# ENDPOINT = "https://api.deepseek.com"
+# MODEL_NAME = "deepseek-chat"
 
+# Github marketplace
+# API_KEY = os.getenv("GITHUB_MARKETPLACE_API_KEY")
+# ENDPOINT = "https://models.inference.ai.azure.com"
+# MODEL_NAME = "gpt-4o"
+
+# Cloudflare Worker AI
+API_KEY = os.getenv("CLOUDFLARE_WORKER_AI_API_KEY")
+ACCOUNT_ID = os.getenv("CLOUDFLARE_WORKER_AI_ACCOUNT_ID")
+ENDPOINT = f"https://api.cloudflare.com/client/v4/accounts/{ACCOUNT_ID}/ai/v1"
+MODEL_NAME = "@cf/meta/llama-3.1-8b-instruct"
+
+os.environ["SSL_CERT_FILE"] = os.getenv("REQUESTS_CA_BUNDLE")
 
 article_template = "You're a professional in movies. Write an article about top {number} IMDb movie, covering the cast, director, genre, release year, keep it short but still covers the required fields."
 article_prompt = PromptTemplate(template=article_template)
@@ -36,7 +47,6 @@ llm = ChatOpenAI(
     api_key=API_KEY,
     temperature=0,
 )
-
 
 article_chain = article_prompt | llm
 summary_chain = summary_prompt | llm

@@ -10,12 +10,23 @@ from langchain_core.rate_limiters import InMemoryRateLimiter
 from langchain_core.runnables import RunnableLambda, RunnablePassthrough
 from langchain_openai import AzureChatOpenAI, ChatOpenAI
 
-
 # Deepseek
-API_KEY = "sk-axxxxx"
-ENDPOINT = "https://api.deepseek.com"
-MODEL_NAME = "deepseek-chat"
+# API_KEY = os.getenv("DEEPSEEK_API_KEY")
+# ENDPOINT = "https://api.deepseek.com"
+# MODEL_NAME = "deepseek-chat"
 
+# Github marketplace
+# API_KEY = os.getenv("GITHUB_MARKETPLACE_API_KEY")
+# ENDPOINT = "https://models.inference.ai.azure.com"
+# MODEL_NAME = "gpt-4o"
+
+# Cloudflare Worker AI
+API_KEY = os.getenv("CLOUDFLARE_WORKER_AI_API_KEY")
+ACCOUNT_ID = os.getenv("CLOUDFLARE_WORKER_AI_ACCOUNT_ID")
+ENDPOINT = f"https://api.cloudflare.com/client/v4/accounts/{ACCOUNT_ID}/ai/v1"
+MODEL_NAME = "@cf/meta/llama-3.1-8b-instruct"
+
+os.environ["SSL_CERT_FILE"] = os.getenv("REQUESTS_CA_BUNDLE")
 
 llm = ChatOpenAI(
     base_url=ENDPOINT,
@@ -23,7 +34,6 @@ llm = ChatOpenAI(
     api_key=API_KEY,
     temperature=0,
 )
-
 
 query_template = """You are a MySQL expert. Given an input question, create a syntactically correct MySQL query.
 Unless the user specifies in the question a specific number of examples to obtain, query for at most {top_k} results using the LIMIT clause as per MySQL. You can order the results to return the most informative data in the database.
